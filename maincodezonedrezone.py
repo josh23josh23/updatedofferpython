@@ -229,7 +229,7 @@ def dfTransform(dfSim):
     dfSim['Revenue per Lot Escalated'] = dfSim['Revenue per Lot']*AnnualCapitalGrowthCompoundedRate
     dfSim['NetRevenue(Less GST)'] = dfSim['Revenue per Lot Escalated']/(1+GSTRate)
     dfSim['OPC/ Construction Cost Per Lot Escalated'] = dfSim['OPC/ Construction Cost Per Lot']*TPICompoundedRate
-    dfSim['No of Lots'] = dfSim['NDH']*(7000/dfSim['Min Lot Size'])
+    dfSim['No of Lots'] = dfSim['Zone 1 NDH']*(7000/dfSim['Min Lot Size'])
     dfSim['Acquisition Cost Per Lot'] = (AcquisitionCost*CPICompoundedRate)/dfSim['No of Lots']
     dfSim['Sales And Marketing'] = dfSim['Revenue per Lot Escalated']*SalesAndMarketingPercent + LegalFees
     dfSim['Interest and Finance without RLV'] = (AcquisitionCost*CPICompoundedRate)/dfSim['No of Lots']  + ConstructionLoanInterestRate*dfSim['OPC/ Construction Cost Per Lot Escalated']
